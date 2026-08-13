@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinterillo Pro - Reclamo Superfinanciera y Tarjeta Olímpica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            body { background: white; color: black; }
+            .no-print { display: none; }
+            .print-area { border: none; box-shadow: none; padding: 0; }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-slate-800 border border-slate-700 rounded-xl shadow-2xl p-6 md:p-10 print-area">
+        
+        <!-- Header institucional -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-700 pb-6 mb-6">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-extrabold text-amber-400 tracking-wide">TINTERILLO PRO</h1>
+                <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Gestión Jurídica y Documental bajo la Ley Colombiana</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-right">
+                <span class="inline-block bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-semibold px-3 py-1 rounded-full">
+                    Derechos de Autor: VIBRAS POSITIVAS HM
+                </span>
+            </div>
+        </div>
+
+        <div class="mb-6 bg-blue-950/40 border border-blue-800/50 p-4 rounded-lg text-sm text-blue-200 no-print">
+            <strong>Instrucciones:</strong> Puede editar cualquier campo del formato antes de proceder a la impresión o generación del documento definitivo para radicar ante la Superintendencia Financiera y el Establecimiento de Crédito / Almacenes Olímpica.
+        </div>
+
+        <!-- Formulario de Edición -->
+        <form id="tramiteForm" class="space-y-6">
+            
+            <h2 class="text-lg font-semibold text-slate-200 border-b border-slate-700 pb-2">1. Datos del Ciudadano Reclamante</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Nombre Completo:</label>
+                    <input type="text" id="nombreReclamante" value="DANNY TRONCOSO" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-slate-200 text-sm focus:border-amber-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Cédula de Ciudadanía:</label>
+                    <input type="text" id="cedulaReclamante" value="73147173" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-slate-200 text-sm focus:border-amber-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Ciudad de Expedición / Residencia:</label>
+                    <input type="text" id="ciudadReclamante" value="Caucasia" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-slate-200 text-sm focus:border-amber-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Entidad Financiera / Comercial:</label>
+                    <input type="text" id="entidadFinanciera" value="ALMACENES OLÍMPICA / BANCO COLPATRIA / SCOTIABANK (Franquicia Mastercard)" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-slate-200 text-sm focus:border-amber-400 focus:outline-none">
+                </div>
+            </div>
+
+            <h2 class="text-lg font-semibold text-slate-200 border-b border-slate-700 pb-2 pt-4">2. Detalles del Producto Objeto de Reclamo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Franquicia y Producto:</label>
+                    <input type="text" id="productoInfo" value="Tarjeta de Crédito Mastercard - Olímpica" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-slate-200 text-sm focus:border-amber-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Número de Tarjeta (Últimos dígitos):</label>
+                    <input type="text" id="numTarjeta" value="5432 8064 4129 2551" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-slate-200 text-sm focus:border-amber-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Fecha de Vencimiento:</label>
+                    <input type="text" id="vencimientoTarjeta" value="12/24" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-slate-200 text-sm focus:border-amber-400 focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Vista Previa del Documento Jurídico Formal -->
+            <div class="mt-8 bg-white text-slate-900 p-8 rounded-lg shadow-inner border border-slate-300 font-serif text-justify leading-relaxed">
+                
+                <div class="text-right text-xs font-sans mb-4 text-slate-600">
+                    Ciudad y Fecha: <span id="lblCiudadFecha">Caucasia, 13 de Agosto de 2026</span>
+                </div>
+
+                <p class="font-bold text-sm mb-4 font-sans">
+                    Señores:<br>
+                    DEFENSORÍA DEL CONSUMIDOR FINANCIERO Y ATENCIÓN AL USUARIO<br>
+                    SUPERINTENDENCIA FINANCIERA DE COLOMBIA<br>
+                    ALMACENES OLÍMPICA S.A. / ESTABLECIMIENTO DE CRÉDITO ALIADO<br>
+                    Ciudad.
+                </p>
+
+                <p class="font-bold text-sm mb-4 font-sans uppercase">
+                    Ref: DERECHO DE PETICIÓN EN INTERÉS PARTICULAR / RECLAMACIÓN DIRECTA POR COBROS NO AUTORIZADOS, NEGATIVA INJUSTIFICADA DE CANCELACIÓN DE PRODUCTO Y SOLICITUD DE PAZ Y SALVO.
+                </p>
+
+                <p class="mb-4 text-sm">
+                    Yo, <strong><span id="txtNombre">DANNY TRONCOSO</span></strong>, identificado con cédula de ciudadanía número <strong><span id="txtCedula">73.147.173</span></strong> expedida en <span id="txtCiudad">Cartagena</span>, actuando en nombre propio y en ejercicio del derecho de petición consagrado en el artículo 23 de la Constitución Política de Colombia, las Leyes 1328 de 2009 (Régimen de Protección al Consumidor Financiero) y 1480 de 2011, respetuosamente me dirijo a sus Despachos para exponer y solicitar lo siguiente:
+                </p>
+
+                <h3 class="font-bold text-sm mt-4 mb-2 font-sans uppercase">PRIMERO: HECHOS</h3>
+                <ol class="list-decimal list-inside space-y-2 text-sm mb-4">
+                    <li>Durante un tiempo prolongado he solicitado de manera reiterada ante <span id="txtEntidad">ALMACENES OLÍMPICA / BANCO COLPATRIA / SCOTIABANK</span> la cancelación definitiva de la tarjeta de crédito de la franquicia <strong>Mastercard</strong> identificada con el número <strong><span id="txtTarjeta">5432 8064 4129 2551</span></strong>, la cual se encuentra vencida desde el periodo <strong><span id="txtVencimiento">12/24</span></strong>.</li>
+                    <li>La entidad se ha negado sistemáticamente a aceptar y procesar dicha solicitud de cancelación bajo el argumento arbitrario de que debo cancelar previamente unos rubros correspondientes a la <strong>reexpedición de dicho plástico</strong>.</li>
+                    <li>Manifiesto bajo la gravedad del juramento que <strong>NUNCA solicité</strong> dicha reexpedición, <strong>NUNCA recibí</strong> físicamente el referido plástico en mis manos, y mucho menos hice uso del mismo, configurándose un presunto cobro inconsulto o endilgado de manera irregular, vulnerando el principio de contraprestación efectiva y de transparencia en la contratación financiera.</li>
+                    <li>La negativa a cancelar la tarjeta amparándose en deudas generadas por un plástico no solicitado ni entregado vulnera flagrantemente mis derechos como consumidor financiero, manteniéndome atado a un producto que no deseo y generando riesgos de cobros de cuotas de manejo u otros conceptos accesorios improcedentes.</li>
+                </ol>
+
+                <h3 class="font-bold text-sm mt-4 mb-2 font-sans uppercase">SEGUNDO: PETICIONES</h3>
+                <ol class="list-decimal list-inside space-y-2 text-sm mb-4">
+                    <li><strong>LA CANCELACIÓN INMEDIATA Y DEFINITIVA</strong> de la tarjeta de crédito Mastercard número <strong><span id="txtTarjeta2">5432 8064 4129 2551</span></strong>, sin condicionarla al pago de sumas por concepto de reexpediciones que jamás fueron solicitadas ni recibidas por el suscrito.</li>
+                    <li><strong>LA EXONERACIÓN Y CONDONACIÓN TOTAL</strong> de cualquier saldo, tarifa, comisión o gasto administrativo derivado de la referida reexpedición del plástico no autorizado.</li>
+                    <li><strong>LA EMISIÓN Y ENTREGA DEL CERTIFICADO DE PAZ Y SALVO</strong> que acredite que a la fecha no adeudo ningún valor por concepto de este producto financiero.</li>
+                    <li>Que se abstengan de realizar cualquier reporte negativo ante las centrales de riesgo (Datacrédito, TransUnion, Cifin) fundamentado en esta disputa originada por un cobro administrativo injustificado.</li>
+                </ol>
+
+                <h3 class="font-bold text-sm mt-4 mb-2 font-sans uppercase">TERCERO: FUNDAMENTOS DE DERECHO</h3>
+                <p class="text-sm mb-4">
+                    Fundo la presente petición en el Artículo 23 de la Constitución Política; los artículos 3, 5 y 18 de la Ley 1328 de 2009 (sobre la obligación de los entidades vigiladas de suministrar información transparente, abstenerse de prácticas abusivas y garantizar el derecho de los consumidores a dar por terminados los contratos de productos financieros de forma expedita); y la Ley 1480 de 2011.
+                </p>
+
+                <div class="mt-8 pt-6 border-t border-slate-400 font-sans text-sm">
+                    <p class="mb-12">Atentamente,</p>
+                    <p>___________________________________________________</p>
+                    <p><strong>Firma:</strong> <span id="lblFirmaNombre">DANNY TRONCOSO</span></p>
+                    <p><strong>C.C. No:</strong> <span id="lblFirmaCedula">73.147.173</span> de <span id="lblFirmaCiudad">Cartagena</span></p>
+                    <p><strong>Notificaciones:</strong> Vía correo electrónico y físico en la ciudad de Caucasia.</p>
+                </div>
+
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="flex flex-col md:flex-row justify-end gap-4 pt-4 no-print">
+                <button type="button" onclick="window.print()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg shadow-lg transition duration-200 flex items-center justify-center gap-2">
+                    🖨️ Imprimir Documento Oficial
+                </button>
+            </div>
+
+        </form>
+
+        <!-- Footer desarrollo -->
+        <div class="mt-10 pt-4 border-t border-slate-700 text-center text-xs text-slate-500">
+            Desarrollado con altos estándares de calidad por <strong>Vibras Positivas HM</strong>. Todos los derechos reservados © 2026.
+        </div>
+
+    </div>
+
+    <script>
+        // Script dinámico para actualización en tiempo real de la vista previa
+        const fields = [
+            { input: 'nombreReclamante', target: ['txtNombre', 'lblFirmaNombre'] },
+            { input: 'cedulaReclamante', target: ['txtCedula', 'lblFirmaCedula'] },
+            { input: 'ciudadReclamante', target: ['txtCiudad', 'lblFirmaCiudad'] },
+            { input: 'entidadFinanciera', target: ['txtEntidad'] },
+            { input: 'numTarjeta', target: ['txtTarjeta', 'txtTarjeta2'] },
+            { input: 'vencimientoTarjeta', target: ['txtVencimiento'] }
+        ];
+
+        fields.forEach(item => {
+            const inputEl = document.getElementById(item.input);
+            inputEl.addEventListener('input', (e) => {
+                item.target.forEach(targetId => {
+                    document.getElementById(targetId).textContent = e.target.value;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
